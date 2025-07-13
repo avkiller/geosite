@@ -204,7 +204,8 @@ jobs:
           echo ipleak.net >> ./data-lite/proxy && echo browserleaks.org >> ./data-lite/proxy
           echo "full:o33249.ingest.sentry.io" >>  ./data-lite/openai
           echo "openai.com" >> ./data-lite/openai
-          cat ./data-lite/proxy_rule.json
+          ls -al
+          cat ./data-lite/github
           go run ./ --datapath=./data-lite --outputname geosite-lite.dat
 
       - name: Get geoip.dat relative files
