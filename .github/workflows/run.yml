@@ -29,7 +29,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          repository: MetaCubeX/meta-rules-dat
+          repository: avkiller/geosite
 
       - name: Checkout Loyalsoldier/domain-list-custom
         uses: actions/checkout@v4
@@ -63,6 +63,7 @@ jobs:
 
       - name: Generate GFWList domains
         run: |
+          ls -al
           cd gfwlist2dnsmasq || exit 1
           chmod +x ./gfwlist2dnsmasq.sh
           ./gfwlist2dnsmasq.sh -l -o ./temp-gfwlist.txt
@@ -168,6 +169,8 @@ jobs:
           NO_SKIP: true
           SED: grep DOMAIN | grep -v "#" | sed 's/  - DOMAIN,/full:/g' | sed 's/  - DOMAIN-SUFFIX,//g' | sed 's/  - DOMAIN-KEYWORD,/keyword:/g'
         run: |
+          ls -al
+          cp *.json ./community/data-lite/
           cd community || exit 1
           mkdir -p data-lite
           curl -sSL https://raw.githubusercontent.com/xishang0128/rules/main/biliintl.list > ./data-lite/biliintl
@@ -201,8 +204,6 @@ jobs:
           echo ipleak.net >> ./data-lite/proxy && echo browserleaks.org >> ./data-lite/proxy
           echo "full:o33249.ingest.sentry.io" >>  ./data-lite/openai
           echo "openai.com" >> ./data-lite/openai
-          ls -al
-          cp *.json ./data-lite/
           cat ./data-lite/proxy_rule.json
           go run ./ --datapath=./data-lite --outputname geosite-lite.dat
 
