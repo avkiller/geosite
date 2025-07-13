@@ -201,7 +201,8 @@ jobs:
           echo ipleak.net >> ./data-lite/proxy && echo browserleaks.org >> ./data-lite/proxy
           echo "full:o33249.ingest.sentry.io" >>  ./data-lite/openai
           echo "openai.com" >> ./data-lite/openai
-          cp ./*.json ./data-lite/
+          ls -al
+          cp *.json ./data-lite/
           cat ./data-lite/proxy_rule.json
           go run ./ --datapath=./data-lite --outputname geosite-lite.dat
 
