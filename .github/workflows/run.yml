@@ -170,9 +170,9 @@ jobs:
           SED: grep DOMAIN | grep -v "#" | sed 's/  - DOMAIN,/full:/g' | sed 's/  - DOMAIN-SUFFIX,//g' | sed 's/  - DOMAIN-KEYWORD,/keyword:/g'
         run: |
           ls -al
-          cp *.json ./community/data-lite/
           cd community || exit 1
           mkdir -p data-lite
+          cp ../*.json ./data-lite/
           curl -sSL https://raw.githubusercontent.com/xishang0128/rules/main/biliintl.list > ./data-lite/biliintl
           curl -sSL https://github.com/v2fly/domain-list-community/raw/master/data/ehentai > ./data-lite/ehentai
           curl -sSL https://github.com/v2fly/domain-list-community/raw/master/data/private > ./data-lite/private
