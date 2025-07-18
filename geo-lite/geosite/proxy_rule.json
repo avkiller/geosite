@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "domain_suffix": [
+        "f-droid.org",
+        "firefly-iii.org",
+        "malcat.fr",
+        "syncthing.net",
+        "annas-archive.org",
+        "v2ex.com",
+        "translate.goog",
+        "sourceforge.net",
+        "discord.com"
+      ]
+    }
+  ]
+}
