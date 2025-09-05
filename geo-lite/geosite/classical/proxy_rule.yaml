@@ -1,0 +1,12 @@
+payload:
+    - DOMAIN-SUFFIX,f-droid.org
+    - DOMAIN-SUFFIX,firefly-iii.org
+    - DOMAIN-SUFFIX,malcat.fr
+    - DOMAIN-SUFFIX,syncthing.net
+    - DOMAIN-SUFFIX,annas-archive.org
+    - DOMAIN-SUFFIX,v2ex.com
+    - DOMAIN-SUFFIX,translate.goog
+    - DOMAIN-SUFFIX,sourceforge.net
+    - DOMAIN-SUFFIX,discord.com
+    - DOMAIN-SUFFIX,sagernet.org
+    - DOMAIN-SUFFIX,virustotal.com
