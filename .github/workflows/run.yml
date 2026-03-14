@@ -209,7 +209,7 @@ jobs:
           echo ipleak.net >> ./data-lite/proxy && echo browserleaks.org >> ./data-lite/proxy
           echo "full:o33249.ingest.sentry.io" >>  ./data-lite/openai
           echo "openai.com" >> ./data-lite/openai
-          ls -al
+          ls -al ./data-lite/
           cat ./data-lite/github
           go run ./ --datapath=./data-lite --outputname geosite-lite.dat
 
