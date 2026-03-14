@@ -174,10 +174,11 @@ jobs:
           ls -al
           cd community || exit 1
           mkdir -p data-lite
-          cp ../proxy_rule ./data-lite/
-          cp ../reject_rule ./data-lite/
-          cp ../gmail_rule ./data-lite/
-          cp ../try_rule ./data-lite/
+          cp ../proxy-rule ./data-lite/
+          cp ../reject-rule ./data-lite/
+          cp ../gmail-rule ./data-lite/
+          cp ../try-rule ./data-lite/
+          cp -f ../*-rule ./data-lite/
           curl -sSL https://raw.githubusercontent.com/xishang0128/rules/main/biliintl.list > ./data-lite/biliintl
           curl -sSL https://github.com/v2fly/domain-list-community/raw/master/data/ehentai > ./data-lite/ehentai
           curl -sSL https://github.com/v2fly/domain-list-community/raw/master/data/private > ./data-lite/private
