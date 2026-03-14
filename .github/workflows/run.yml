@@ -177,7 +177,7 @@ jobs:
           cp ../proxy_rule ./data-lite/
           cp ../reject_rule ./data-lite/
           cp ../gmail_rule ./data-lite/
-          cp ../*_rule ./data-lite/
+          cp ../try_rule ./data-lite/
           curl -sSL https://raw.githubusercontent.com/xishang0128/rules/main/biliintl.list > ./data-lite/biliintl
           curl -sSL https://github.com/v2fly/domain-list-community/raw/master/data/ehentai > ./data-lite/ehentai
           curl -sSL https://github.com/v2fly/domain-list-community/raw/master/data/private > ./data-lite/private
